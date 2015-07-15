@@ -27,10 +27,10 @@ void draw(){
     for (int i = 0; i < sx; i++){
       for (int j = 0; j < sy; j++){
         if (world[i][j][1] == 1){
-          text("●", 10 + 20 * i, 30 + 20 * j);
+          text("O", 10 + 20 * i, 30 + 20 * j);
         }
         if (world[i][j][1] == 0){
-          text("○", 10 + 20 * i, 30 + 20 * j);
+          text("-", 10 + 20 * i, 30 + 20 * j);
         }
         world[i][j][0] = world[i][j][1];
       }
@@ -52,7 +52,7 @@ void mousePressed(){
     int i = (mouseX - 10) / 20;
     int j = (mouseY - 10) / 20;
     world[i][j][1] = 1;
-    text("●", 10 + 20 * i, 30 + 20 * j);
+    text("O", 10 + 20 * i, 30 + 20 * j);
   }
 }
 
